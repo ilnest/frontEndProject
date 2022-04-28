@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="loginStyles.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Communal bills</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mainContent">
+        <div class="login-box">
+          <div class="login-line line">
+            <p>Login</p>
+            <input id="login" type="text" class="login" />
+          </div>
+          <div class="password-line line">
+            <p>Password</p>
+            <input id="password" type="text" class="password" />
+          </div>
+
+          <button id="signin">Sing in</button>
+        </div>
+
+        <div class="communal-img">
+          <img src="images/icons.jpg" height="500" />
+        </div>
+      </div>
+    </div>
+    <script>
+      signinElement = document.getElementById("signin");
+      signinElement.addEventListener("click", () => {
+        loginValue = document.getElementById("login").value;
+        password = document.getElementById("password").value;
+
+        if (loginValue != "admin" || password != "admin") {
+          alert("Wrong login or password");
+        } else {
+          window.location.href = "info.html";
+          console.log("correct");
+        }
+      });
+      console.log("test");
+    </script>
+  </body>
+</html>
